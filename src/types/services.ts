@@ -1,3 +1,4 @@
+
 export interface License {
   title: string;
   description: string;
@@ -45,9 +46,9 @@ export const servicesData: ServiceDetail[] = [
       "Registration with local government authorities for business permits",
       "Assistance with opening a business bank account"
     ],
-    subCategories: [
+    forms: [
       {
-        title: "Company Registration Forms",
+        category: "Company Registration Forms",
         items: [
           "Application for Registration of a Company",
           "Notice of Change in Situation or Address of Registered Office (Form No. 111)",
@@ -56,6 +57,22 @@ export const servicesData: ServiceDetail[] = [
           "Return of Allotment of Shares (Form No. 55a)",
           "Notice of Increase in Nominal Capital (Form No. 66)",
           "Annual Return of the Company (Form No. 128)"
+        ]
+      },
+      {
+        category: "Business Name Registration Forms",
+        items: [
+          "Application for Registration of a Business Name",
+          "Notice of Change in Business Name Particulars",
+          "Cessation of Business Name Registration"
+        ]
+      },
+      {
+        category: "Trademark and Patent Filing",
+        items: [
+          "Application for Registration of a Trademark",
+          "Application for a Patent or Industrial Design",
+          "Particulars of a Contract Relating to Shares Allotted"
         ]
       }
     ]
@@ -133,36 +150,6 @@ export const servicesData: ServiceDetail[] = [
           { title: "Pharmaceutical License", description: "For pharmacies and drug manufacturers, regulated by TMDA" }
         ]
       }
-    ],
-    forms: [
-      {
-        category: "Company Registration Forms",
-        items: [
-          "Application for Registration of a Company",
-          "Notice of Change in Situation or Address of Registered Office (Form No. 111)",
-          "Change of Particulars for a Director or Secretary (Form No. 210c)",
-          "Particulars for the Registration of a Charge (Form No. 98a)",
-          "Return of Allotment of Shares (Form No. 55a)",
-          "Notice of Increase in Nominal Capital (Form No. 66)",
-          "Annual Return of the Company (Form No. 128)"
-        ]
-      },
-      {
-        category: "Business Name Registration Forms",
-        items: [
-          "Application for Registration of a Business Name",
-          "Notice of Change in Business Name Particulars",
-          "Cessation of Business Name Registration"
-        ]
-      },
-      {
-        category: "Trademark and Patent Filing",
-        items: [
-          "Application for Registration of a Trademark",
-          "Application for a Patent or Industrial Design",
-          "Particulars of a Contract Relating to Shares Allotted"
-        ]
-      }
     ]
   },
   {
@@ -199,6 +186,18 @@ export const servicesData: ServiceDetail[] = [
       "Compliance risk assessment",
       "Developing business continuity plans",
       "Training on frameworks like ISO 31000"
+    ]
+  },
+  {
+    title: "Permits",
+    description: "Assistance with various permits for business operations",
+    items: [
+      "Identification of required permits for business activities",
+      "Application and processing of various types of permits",
+      "Compliance with regulatory requirements for permit holders",
+      "Renewal and management of existing permits",
+      "Advisory on permit conditions and requirements",
+      "Liaison with government authorities for permit approvals"
     ],
     subCategories: [
       {

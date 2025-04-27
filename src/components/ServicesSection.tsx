@@ -15,7 +15,7 @@ const ServicesSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl font-bold text-center mb-12 text-business-blue">Our Services</h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 mb-12">
           {servicesData.map((service) => (
             <Card 
               key={service.title}
@@ -26,9 +26,9 @@ const ServicesSection = () => {
               <div className="flex items-start gap-4">
                 <FileText className="h-6 w-6 text-accent mt-1" />
                 <div>
-                  <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
-                  <p className="text-gray-600 text-sm">{service.description}</p>
-                  <Button variant="link" className="mt-4 text-accent p-0">
+                  <h3 className="text-lg font-semibold mb-2">{service.title}</h3>
+                  <p className="text-gray-600 text-xs">{service.description}</p>
+                  <Button variant="link" className="mt-2 text-accent p-0 text-xs">
                     Learn More
                   </Button>
                 </div>
