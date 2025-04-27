@@ -7,11 +7,15 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-white shadow-md">
+    <nav className="bg-white shadow-md fixed w-full top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex-shrink-0 flex items-center">
-            <img src="/lovable-uploads/09ee892d-acb8-4033-8f3a-222b45bbef3b.png" alt="Logo" className="h-12 w-auto" />
+            <img 
+              src="/lovable-uploads/09ee892d-acb8-4033-8f3a-222b45bbef3b.png" 
+              alt="Logo" 
+              className="h-12 w-auto"
+            />
           </div>
           
           <div className="hidden sm:ml-6 sm:flex sm:space-x-8">

@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ServiceDetail, servicesData } from '@/types/services';
 import { FileText } from 'lucide-react';
+import ServiceLicenses from './ServiceLicenses';
+import ServiceForms from './ServiceForms';
 
 const ServicesSection = () => {
   const [selectedService, setSelectedService] = useState<ServiceDetail | null>(null);
@@ -39,10 +41,10 @@ const ServicesSection = () => {
           <div className="animate-fade-in bg-white p-8 rounded-lg shadow-lg">
             <h3 className="text-2xl font-bold mb-6 text-business-blue">{selectedService.title}</h3>
             
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div className="space-y-8">
               <div>
                 <h4 className="text-lg font-semibold mb-4 text-accent">Key Services</h4>
-                <ul className="space-y-3">
+                <ul className="grid grid-cols-1 lg:grid-cols-2 gap-3">
                   {selectedService.items.map((item, index) => (
                     <li key={index} className="flex items-start gap-2">
                       <span className="text-accent mt-1">•</span>
@@ -68,6 +70,14 @@ const ServicesSection = () => {
                     </div>
                   ))}
                 </div>
+              )}
+
+              {selectedService.licenses && (
+                <ServiceLicenses licenses={selectedService.licenses} />
+              )}
+
+              {selectedService.forms && (
+                <ServiceForms forms={selectedService.forms} />
               )}
             </div>
           </div>
