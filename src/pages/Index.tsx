@@ -1,4 +1,3 @@
-
 import Navbar from "@/components/Navbar";
 import ServicesSection from "@/components/ServicesSection";
 import { Button } from "@/components/ui/button";
@@ -12,6 +11,11 @@ const Index = () => {
       <section className="relative bg-business-blue text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
+            <img 
+              src="/lovable-uploads/d421a722-52c3-46c4-9691-ee8647d5a8c8.png"
+              alt="Rona Consultants"
+              className="mx-auto mb-8 h-24 w-auto"
+            />
             <h1 className="text-4xl font-bold mb-6 animate-fade-in">
               Reliable ally for navigating the complexities of
               <span className="text-accent"> Tax, Transfer Pricing</span> and
