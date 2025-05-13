@@ -110,44 +110,43 @@ export const servicesData: ServiceDetail[] = [
       "Obtaining local government business licenses",
       "Compliance with health, safety, and environmental regulations",
       "Managing renewals and updates of licenses through BRELA"
+    ]
+  },
+  {
+    title: "Auditing",
+    description: "Professional auditing and assurance services",
+    items: [
+      "Financial Statement Audits",
+      "Internal Control Audits",
+      "Compliance Audits",
+      "Performance Audits",
+      "Tax Audits",
+      "Operational Audits",
+      "IT Systems Audits"
     ],
-    licenses: [
+    subCategories: [
       {
-        category: "Business Licenses",
+        title: "Types of Auditing Services",
         items: [
-          { title: "Class A Licenses", description: "Issued by BRELA for larger businesses operating across regions" },
-          { title: "Class B Licenses", description: "Issued by Local Government Authorities for smaller, localized businesses" }
+          "Statutory Audits (as per Companies Act)",
+          "Special Purpose Audits",
+          "Due Diligence Reviews",
+          "Forensic Audits",
+          "Environmental Audits",
+          "Quality Management System Audits",
+          "Risk-Based Audits"
         ]
       },
       {
-        category: "Sector-Specific Licenses",
+        title: "Regulatory Compliance",
         items: [
-          { title: "Tourism License", description: "Regulated by the Ministry of Natural Resources and Tourism" },
-          { title: "Mining License", description: "Issued by the Mining Commission" },
-          { title: "Telecommunications License", description: "Provided by TCRA" },
-          { title: "Industrial License", description: "For manufacturing businesses, issued by the Ministry of Industry and Trade" },
-          { title: "Agricultural License", description: "For agribusinesses, regulated by the Ministry of Agriculture" },
-          { title: "Energy License", description: "For energy production and distribution, issued by EWURA" },
-          { title: "Transport License", description: "For logistics and transport services, regulated by SUMATRA" }
-        ]
-      },
-      {
-        category: "Professional Licenses",
-        items: [
-          { title: "Accounting/Auditing Licenses", description: "Issued by NBAA" },
-          { title: "Legal Practice Licenses", description: "Provided by the Tanganyika Law Society" },
-          { title: "Medical Practice Licenses", description: "Issued by the Medical Council of Tanganyika" },
-          { title: "Engineering Licenses", description: "Regulated by the Engineers Registration Board" },
-          { title: "Architectural Licenses", description: "Issued by the Architects and Quantity Surveyors Registration Board" }
-        ]
-      },
-      {
-        category: "Other Licenses",
-        items: [
-          { title: "Environmental License", description: "For businesses impacting the environment, issued by NEMC" },
-          { title: "Broadcasting License", description: "For media and broadcasting companies, regulated by TCRA" },
-          { title: "Fishing License", description: "For commercial fishing, issued by the Ministry of Livestock and Fisheries" },
-          { title: "Pharmaceutical License", description: "For pharmacies and drug manufacturers, regulated by TMDA" }
+          "NBAA Standards Compliance",
+          "International Standards on Auditing (ISA)",
+          "Tanzania Financial Reporting Standards (TFRS)",
+          "International Financial Reporting Standards (IFRS)",
+          "Industry-Specific Regulatory Requirements",
+          "SOX Compliance (for international companies)",
+          "Local Statutory Requirements"
         ]
       }
     ]

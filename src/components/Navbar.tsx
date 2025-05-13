@@ -11,18 +11,20 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex-shrink-0 flex items-center">
-            <img 
-              src="/lovable-uploads/09ee892d-acb8-4033-8f3a-222b45bbef3b.png" 
-              alt="Logo" 
-              className="h-12 w-auto"
-            />
+            <Link to="/">
+              <img 
+                src="/lovable-uploads/d421a722-52c3-46c4-9691-ee8647d5a8c8.png" 
+                alt="Rona Consultants" 
+                className="h-16 w-auto"
+              />
+            </Link>
           </div>
           
           <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
             {["Home", "About Us", "Services", "Industries", "Insights", "Contact"].map((item) => (
               <Link
                 key={item}
-                to={`/${item.toLowerCase().replace(" ", "-")}`}
+                to={`/${item.toLowerCase().replace(/\s+/g, "-")}`}
                 className="text-gray-600 hover:text-nav-blue px-3 py-2 text-sm font-medium transition-colors"
               >
                 {item}
@@ -43,7 +45,7 @@ const Navbar = () => {
               {["Home", "About Us", "Services", "Industries", "Insights", "Contact"].map((item) => (
                 <Link
                   key={item}
-                  to={`/${item.toLowerCase().replace(" ", "-")}`}
+                  to={`/${item.toLowerCase().replace(/\s+/g, "-")}`}
                   className="block px-3 py-2 text-base font-medium text-gray-600 hover:text-nav-blue"
                   onClick={() => setIsOpen(false)}
                 >

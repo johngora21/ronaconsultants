@@ -5,16 +5,7 @@ const AboutUs = () => {
   return (
     <div className="min-h-screen bg-white">
       <Navbar />
-      
-      {/* Hero Section */}
-      <section className="pt-20 bg-business-blue text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <h1 className="text-4xl font-bold mb-6 animate-fade-in">About Rona Consultants</h1>
-          <p className="text-lg mb-8 animate-fade-in">
-            Your trusted partner in business solutions and regulatory compliance
-          </p>
-        </div>
-      </section>
+     
 
       {/* Mission & Vision */}
       <section className="py-16 bg-white">
