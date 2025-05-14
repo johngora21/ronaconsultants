@@ -9,13 +9,13 @@ const Navbar = () => {
   return (
     <nav className="bg-white shadow-md fixed w-full top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16">
+        <div className="flex justify-between h-16 items-center">
           <div className="flex-shrink-0 flex items-center">
             <Link to="/">
               <img 
                 src="/lovable-uploads/d421a722-52c3-46c4-9691-ee8647d5a8c8.png" 
                 alt="Rona Consultants" 
-                className="h-16 w-auto"
+                className="h-32 w-auto"
               />
             </Link>
           </div>

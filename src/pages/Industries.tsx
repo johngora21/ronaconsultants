@@ -10,13 +10,13 @@ const industries = [
     title: "Manufacturing",
     description: "Comprehensive solutions for manufacturing businesses, from permits to compliance.",
     details: "Our manufacturing consulting services include:\n- Factory setup and compliance (BRELA, TBS)\n- Production optimization\n- Quality control systems (TBS Standards)\n- Environmental compliance (NEMC)\n- Import/export documentation (TRA, TFDA)\n- Industrial permits (MIT)\n- Manufacturing licenses (BRELA, TBS)\n\nKey Regulatory Bodies:\n• BRELA - Business Registration and Licensing Agency\n• TBS - Tanzania Bureau of Standards\n• NEMC - National Environment Management Council\n• TRA - Tanzania Revenue Authority\n• MIT - Ministry of Industry and Trade",
-    image: "/images/industries/manufacturing.webp"
+    image: "/images/industries/what-is-Manufacturing-.webp"
   },
   {
     title: "Tourism & Hospitality",
     description: "Specialized services for tourism operators and hospitality businesses.",
     details: "We provide comprehensive support for:\n- Hotel and lodge licensing (TALA)\n- Tour operator permits (TTB)\n- Tourism board registration (TTB)\n- Health and safety compliance (TFDA)\n- Staff training documentation\n- Tourism investment advisory\n- Industry-specific tax guidance (TRA)\n\nKey Regulatory Bodies:\n• TTB - Tanzania Tourist Board\n• TALA - Tourism Agency Licensing Authority\n• TFDA - Tanzania Food and Drugs Authority\n• TRA - Tanzania Revenue Authority",
-    image: "/images/industries/tourism.webp"
+    image: "/images/industries/safari_in_serengeti.jpg"
   },
   {
     title: "Oil and Gas",
