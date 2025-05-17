@@ -1,25 +1,7 @@
-import Navbar from "@/components/Navbar";
-import Hero from "@/components/Hero";
-import IndustriesGrid from "../components/IndustriesGrid";
-import ServicesSection from "@/components/ServicesSection";
-import AboutUs from "./AboutUs";
-import Industries from "./Industries";
-import Insights from "./Insights";
-import Contact from "./Contact";
+import { Navigate } from 'react-router-dom';
 
 const Index = () => {
-  return (
-    <div className="min-h-screen bg-white">
-      <Navbar />
-      <Hero />
-      <IndustriesGrid />
-      <ServicesSection />
-      <AboutUs />
-      <Industries />
-      <Insights />
-      <Contact />
-    </div>
-  );
+  return <Navigate to="/home" replace />;
 };
 
 export default Index;

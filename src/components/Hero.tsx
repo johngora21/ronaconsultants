@@ -6,7 +6,7 @@ const Hero: React.FC = () => {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: 'url("https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3")',
+          backgroundImage: "/images/industries/black.jpg",
           filter: 'brightness(0.8)'
         }}
       />

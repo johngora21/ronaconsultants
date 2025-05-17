@@ -15,17 +15,69 @@ const Home = () => {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="relative text-black py-20" style={{ backgroundImage: "url('/images/team.jpg')", backgroundSize: 'cover', backgroundPosition: 'center' }}>
+      
+      <section className="relative text-black py-20 h-screen flex items-center justify-center" 
+        style={{ backgroundImage: "url('/images/industries/black.jpg')", backgroundSize: 'cover', backgroundPosition: 'center' }}>
+        
+        {/* Dark overlay */}
+        <div className="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+          <h1 className="text-5xl md:text-6xl font-bold mb-12 animate-fade-in text-white drop-shadow-lg">
+            Your Strategic Partner in <span className="text-accent">Business Excellence</span> and <span className="text-accent">Regulatory Compliance</span>
+          </h1>
+          <p className="text-lg mb-8 animate-fade-in text-white drop-shadow-md max-w-4xl mx-auto leading-relaxed">
+            At Rona Consultants, we provide comprehensive professional solutions that transform challenges into opportunities. Our expertise helps businesses & organizations optimize their operations, ensure compliance, and achieve sustainable growth in the dynamic East African market.
+          </p>
+        </div>
+      </section>
+
+      {/* Mission, Vision & Values Section */}
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold mb-6 animate-fade-in">
-              Your Strategic Partner in
-              <span className="text-accent"> Business Excellence</span> and
-              <span className="text-accent"> Regulatory Compliance</span>
-            </h1>
-            <p className="text-lg mb-8 animate-fade-in">
-              We provide comprehensive professional solutions that transform challenges into opportunities. Our expertise helps businesses & organizations optimize their operations, ensure compliance, and achieve sustainable growth in the dynamic East African market.
-            </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
+            <div className="bg-gray-50 p-8 rounded-lg">
+              <h2 className="text-2xl font-bold text-business-blue mb-4">Our Mission</h2>
+              <p className="text-gray-600">
+                To provide exceptional business consulting services that enable our clients to navigate 
+                complex regulatory environments and achieve sustainable growth through expert guidance 
+                and innovative solutions.
+              </p>
+            </div>
+            <div className="bg-gray-50 p-8 rounded-lg">
+              <h2 className="text-2xl font-bold text-business-blue mb-4">Our Vision</h2>
+              <p className="text-gray-600">
+                To be the leading business consultancy firm in Tanzania, recognized for our expertise, 
+                integrity, and commitment to delivering value-driven solutions that transform businesses 
+                and drive economic growth.
+              </p>
+            </div>
+          </div>
+
+          {/* Values */}
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-business-blue mb-12">Our Values</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {[
+                {
+                  title: "Excellence",
+                  description: "We strive for excellence in everything we do, delivering high-quality solutions."
+                },
+                {
+                  title: "Integrity",
+                  description: "We maintain the highest standards of professional ethics and transparency."
+                },
+                {
+                  title: "Innovation",
+                  description: "We embrace innovation to provide cutting-edge solutions for our clients."
+                }
+              ].map((value, index) => (
+                <div key={index} className="bg-gray-50 p-6 rounded-lg">
+                  <h3 className="text-xl font-semibold text-business-blue mb-3">{value.title}</h3>
+                  <p className="text-gray-600">{value.description}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -34,7 +86,17 @@ const Home = () => {
       <AboutUs />
 
       {/* Services Section - Show what we offer */}
-      <ServicesSection />
+      <section className="pt-20 bg-business-blue text-white w-full">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <h1 className="text-4xl font-bold mb-6 animate-fade-in">Our Services</h1>
+          <p className="text-lg mb-8 animate-fade-in">
+            Comprehensive professional solutions tailored to your business needs
+          </p>
+        </div>
+      </section>
+      <div className="pt-16">
+        <ServicesSection />
+      </div>
 
       {/* Industries Section - Display our expertise areas */}
       <Industries />
@@ -48,7 +110,7 @@ const Home = () => {
       {/* Final Call to Action Section */}
       <section className="bg-gray-50 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-business-blue mb-6">Ready to Get Started?</h2>
+          <h2 className="text-2xl font-bold text-business-blue mb-6">Ready to Get Started?</h2>
           <p className="text-lg text-gray-600 mb-8">
             Explore our comprehensive range of services or get in touch with us today.
           </p>

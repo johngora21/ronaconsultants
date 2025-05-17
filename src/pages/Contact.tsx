@@ -1,10 +1,11 @@
-
 import Navbar from "@/components/Navbar";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, Phone, MapPin } from "lucide-react";
+import { Label } from "@/components/ui/label";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 
 const Contact = () => {
   return (
@@ -25,38 +26,63 @@ const Contact = () => {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Contact Form */}
+            {/* Consultation Booking Form */}
             <Card className="p-8">
-              <h2 className="text-2xl font-bold text-business-blue mb-6">Send us a Message</h2>
+              <h2 className="text-2xl font-bold text-business-blue mb-6">Book a Consultation</h2>
               <form className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      First Name
-                    </label>
-                    <Input type="text" placeholder="Your first name" />
+                  <div className="space-y-2">
+                    <Label htmlFor="firstName">First Name</Label>
+                    <Input id="firstName" placeholder="Your first name" />
                   </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Last Name
-                    </label>
-                    <Input type="text" placeholder="Your last name" />
+                  <div className="space-y-2">
+                    <Label htmlFor="lastName">Last Name</Label>
+                    <Input id="lastName" placeholder="Your last name" />
                   </div>
                 </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Email
-                  </label>
-                  <Input type="email" placeholder="Your email address" />
+
+                <div className="space-y-2">
+                  <Label htmlFor="email">Email</Label>
+                  <Input id="email" type="email" placeholder="Your email address" />
                 </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Message
-                  </label>
-                  <Textarea placeholder="How can we help you?" className="h-32" />
+
+                <div className="space-y-2">
+                  <Label htmlFor="phone">Phone Number</Label>
+                  <Input id="phone" type="tel" placeholder="Your phone number" />
                 </div>
-                <Button className="w-full bg-accent text-white hover:bg-accent/90">
-                  Send Message
+
+                <div className="space-y-2">
+                  <Label htmlFor="service">Service of Interest</Label>
+                  <Select>
+                    <SelectTrigger>
+                      <SelectValue placeholder="Select a service" />
+                    </SelectTrigger>
+                    <SelectContent className="bg-white">
+                      <SelectItem value="business-registration">Business Registration</SelectItem>
+                      <SelectItem value="tax-advisory">Tax Advisory</SelectItem>
+                      <SelectItem value="legal-services">Legal Services</SelectItem>
+                      <SelectItem value="business-consulting">Business Consulting</SelectItem>
+                      <SelectItem value="other">Other</SelectItem>
+                    </SelectContent>
+                  </Select>
+                </div>
+
+                <div className="space-y-2">
+                  <Label htmlFor="preferredDate">Preferred Consultation Date</Label>
+                  <Input id="preferredDate" type="date" />
+                </div>
+
+                <div className="space-y-2">
+                  <Label htmlFor="message">Additional Information</Label>
+                  <Textarea 
+                    id="message" 
+                    placeholder="Please provide any additional details about your consultation needs"
+                    className="h-32"
+                  />
+                </div>
+
+                <Button className="w-full bg-accent hover:bg-accent/90">
+                  Book Consultation
                 </Button>
               </form>
             </Card>
@@ -70,7 +96,7 @@ const Contact = () => {
                   <MapPin className="h-6 w-6 text-accent mt-1" />
                   <div>
                     <h3 className="font-semibold text-business-blue">Visit Us</h3>
-                    <p className="text-gray-600">123 Business Street, Dar es Salaam, Tanzania</p>
+                    <p className="text-gray-600">Morocco Square, Dar es Salaam, Tanzania</p>
                   </div>
                 </div>
 
@@ -78,7 +104,7 @@ const Contact = () => {
                   <Phone className="h-6 w-6 text-accent mt-1" />
                   <div>
                     <h3 className="font-semibold text-business-blue">Call Us</h3>
-                    <p className="text-gray-600">+255 123 456 789</p>
+                    <p className="text-gray-600">+255 717801745</p>
                   </div>
                 </div>
 
@@ -86,7 +112,7 @@ const Contact = () => {
                   <Mail className="h-6 w-6 text-accent mt-1" />
                   <div>
                     <h3 className="font-semibold text-business-blue">Email Us</h3>
-                    <p className="text-gray-600">info@ronaconsultants.com</p>
+                    <p className="text-gray-600">info@ronaconsultants.co.tz</p>
                   </div>
                 </div>
               </div>
