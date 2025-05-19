@@ -1,10 +1,12 @@
-
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import { Menu } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+
+  const navItems = ["Home", "About Us", "Services", "Industries", "Insights", "Contact"];
 
   return (
     <nav className="bg-white shadow-md fixed w-full top-0 z-50">
@@ -20,8 +22,9 @@ const Navbar = () => {
             </Link>
           </div>
           
+          {/* Desktop Navigation */}
           <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
-            {["Home", "About Us", "Services", "Industries", "Insights", "Contact"].map((item) => (
+            {navItems.map((item) => (
               <Link
                 key={item}
                 to={`/${item.toLowerCase().replace(/\s+/g, "-")}`}
@@ -32,29 +35,31 @@ const Navbar = () => {
             ))}
           </div>
 
-          <div className="sm:hidden flex items-center">
-            <button onClick={() => setIsOpen(!isOpen)} className="text-gray-600 hover:text-gray-900">
-              <Menu className="h-6 w-6" />
-            </button>
+          {/* Mobile Navigation */}
+          <div className="sm:hidden">
+            <Sheet open={isOpen} onOpenChange={setIsOpen}>
+              <SheetTrigger asChild>
+                <button className="text-gray-600 hover:text-gray-900">
+                  <Menu className="h-6 w-6" />
+                </button>
+              </SheetTrigger>
+              <SheetContent side="right" className="w-[300px] sm:w-[400px]">
+                <div className="flex flex-col space-y-4 mt-8">
+                  {navItems.map((item) => (
+                    <Link
+                      key={item}
+                      to={`/${item.toLowerCase().replace(/\s+/g, "-")}`}
+                      className="text-gray-600 hover:text-nav-blue px-3 py-2 text-base font-medium transition-colors"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      {item}
+                    </Link>
+                  ))}
+                </div>
+              </SheetContent>
+            </Sheet>
           </div>
         </div>
-
-        {isOpen && (
-          <div className="sm:hidden">
-            <div className="pt-2 pb-3 space-y-1">
-              {["Home", "About Us", "Services", "Industries", "Insights", "Contact"].map((item) => (
-                <Link
-                  key={item}
-                  to={`/${item.toLowerCase().replace(/\s+/g, "-")}`}
-                  className="block px-3 py-2 text-base font-medium text-gray-600 hover:text-nav-blue"
-                  onClick={() => setIsOpen(false)}
-                >
-                  {item}
-                </Link>
-              ))}
-            </div>
-          </div>
-        )}
       </div>
     </nav>
   );

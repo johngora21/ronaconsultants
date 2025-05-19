@@ -16,17 +16,23 @@ const Home = () => {
       
       {/* Hero Section */}
       
-      <section className="relative text-black py-20 h-screen flex items-center justify-center" 
-        style={{ backgroundImage: "url('/images/industries/black.jpg')", backgroundSize: 'cover', backgroundPosition: 'center' }}>
+      <section className="relative text-black min-h-[100vh] flex items-center justify-center" 
+        style={{ 
+          backgroundImage: "url('/images/industries/black.jpg')", 
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          backgroundAttachment: 'fixed'
+        }}>
         
         {/* Dark overlay */}
         <div className="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <h1 className="text-5xl md:text-6xl font-bold mb-12 animate-fade-in text-white drop-shadow-lg">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 py-20">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 sm:mb-12 animate-fade-in text-white drop-shadow-lg">
             Your Strategic Partner in <span className="text-accent">Business Excellence</span> and <span className="text-accent">Regulatory Compliance</span>
           </h1>
-          <p className="text-lg mb-8 animate-fade-in text-white drop-shadow-md max-w-4xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg mb-6 sm:mb-8 animate-fade-in text-white drop-shadow-md max-w-4xl mx-auto leading-relaxed px-4 sm:px-0">
             At Rona Consultants, we provide comprehensive professional solutions that transform challenges into opportunities. Our expertise helps businesses & organizations optimize their operations, ensure compliance, and achieve sustainable growth in the dynamic East African market.
           </p>
         </div>
