@@ -122,7 +122,7 @@ const Industries = () => {
       
       {/* Hero Section */}
       <section className="pt-20 bg-business-blue text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:py-4 py-4">
           <h1 className="text-4xl font-bold mb-6 animate-fade-in">Industries We Serve</h1>
           <p className="text-lg mb-8 animate-fade-in">
             Specialized solutions across key sectors of the Tanzanian economy
