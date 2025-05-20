@@ -122,7 +122,7 @@ const Home = () => {
 
       {/* About Us Section */}
       <section className="bg-gray-900">
-        <AboutUs />
+        <AboutUs isSection={true} />
       </section>
 
       {/* Services Section */}
@@ -132,7 +132,7 @@ const Home = () => {
 
       {/* Industries Section */}
       <section className="bg-gray-900">
-        <Industries />
+        <Industries isSection={true} />
       </section>
 
       {/* Insights Section */}
@@ -142,7 +142,7 @@ const Home = () => {
 
       {/* Contact Section */}
       <section className="bg-gray-900">
-        <Contact />
+        <Contact isSection={true} />
       </section>
 
       {/* Final Call to Action Section */}
