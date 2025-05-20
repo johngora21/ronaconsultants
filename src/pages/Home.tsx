@@ -71,11 +71,11 @@ const Home = () => {
       </section>
 
       {/* Mission, Vision & Values Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
             <div className="bg-white p-8 rounded-lg shadow-sm">
-              <h2 className="text-2xl font-bold text-business-blue mb-4">Our Mission</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">Our Mission</h2>
               <p className="text-gray-600">
                 To provide exceptional business consulting services that enable our clients to navigate 
                 complex regulatory environments and achieve sustainable growth through expert guidance 
@@ -83,7 +83,7 @@ const Home = () => {
               </p>
             </div>
             <div className="bg-white p-8 rounded-lg shadow-sm">
-              <h2 className="text-2xl font-bold text-business-blue mb-4">Our Vision</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">Our Vision</h2>
               <p className="text-gray-600">
                 To be the leading business consultancy firm in Tanzania, recognized for our expertise, 
                 integrity, and commitment to delivering value-driven solutions that transform businesses 
@@ -94,7 +94,7 @@ const Home = () => {
 
           {/* Values */}
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-business-blue mb-12">Our Values</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-12">Our Values</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
                 {
@@ -111,7 +111,7 @@ const Home = () => {
                 }
               ].map((value, index) => (
                 <div key={index} className="bg-white p-6 rounded-lg shadow-sm">
-                  <h3 className="text-xl font-semibold text-business-blue mb-3">{value.title}</h3>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">{value.title}</h3>
                   <p className="text-gray-600">{value.description}</p>
                 </div>
               ))}
@@ -120,42 +120,42 @@ const Home = () => {
         </div>
       </section>
 
-      {/* About Us Section - First to establish who we are */}
-      <section className="bg-white">
+      {/* About Us Section */}
+      <section className="bg-gray-900">
         <AboutUs />
       </section>
 
-      {/* Services Section - Show what we offer */}
-      <section className="bg-gray-50">
+      {/* Services Section */}
+      <section className="bg-gray-100">
         <ServicesSection />
       </section>
 
-      {/* Industries Section - Display our expertise areas */}
-      <section className="bg-white">
+      {/* Industries Section */}
+      <section className="bg-gray-900">
         <Industries />
       </section>
 
-      {/* Insights Section - Share our knowledge */}
-      <section className="bg-gray-50">
+      {/* Insights Section */}
+      <section className="bg-gray-100">
         <Insights />
       </section>
 
-      {/* Contact Section - Call to action at the end */}
-      <section className="bg-white">
+      {/* Contact Section */}
+      <section className="bg-gray-900">
         <Contact />
       </section>
 
       {/* Final Call to Action Section */}
-      <section className="bg-gray-50 py-16">
+      <section className="bg-gray-100 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl font-bold text-business-blue mb-6">Ready to Get Started?</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">Ready to Get Started?</h2>
           <p className="text-lg text-gray-600 mb-8">
             Explore our comprehensive range of services or get in touch with us today.
           </p>
           <div className="flex justify-center gap-4">
             <Button 
               variant="outline"
-              className="bg-business-blue text-white hover:bg-business-blue/90"
+              className="bg-gray-900 text-white hover:bg-gray-800"
               onClick={() => navigate('/services')}
             >
               Our Services

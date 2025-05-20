@@ -117,11 +117,11 @@ const Industries = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-900">
+    <div className="min-h-screen">
       <Navbar />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <h1 className="text-3xl sm:text-4xl font-bold text-center text-white mb-8">Industries we Serve</h1>
-        <p className="text-base sm:text-lg text-center text-gray-300 mb-12">
+        <h1 className="text-3xl sm:text-4xl font-bold text-center text-business-blue mb-8">Industries we Serve</h1>
+        <p className="text-base sm:text-lg text-center text-gray-600 mb-12">
           Specialized solutions across key sectors of the Tanzanian economy
         </p>
 
@@ -130,9 +130,9 @@ const Industries = () => {
           {industries.map((industry, index) => (
             <Card 
               key={index} 
-              className="p-6 transition-all duration-300 hover:shadow-lg overflow-hidden bg-gray-800"
+              className="p-6 transition-all duration-300 hover:shadow-lg overflow-hidden"
             >
-              <div className="relative w-full h-40 mb-4 rounded-lg overflow-hidden bg-gray-700">
+              <div className="relative w-full h-40 mb-4 rounded-lg overflow-hidden bg-gray-100">
                 {!imageError[index] && industry.image && (
                   <img
                     src={industry.image}
@@ -150,8 +150,8 @@ const Industries = () => {
               <div className="flex items-start gap-4">
                 <FileText className="h-6 w-6 text-accent mt-1" />
                 <div>
-                  <h3 className="text-lg font-semibold mb-2 text-white">{industry.title}</h3>
-                  <p className="text-gray-300 text-sm">{industry.description}</p>
+                  <h3 className="text-lg font-semibold mb-2">{industry.title}</h3>
+                  <p className="text-gray-600 text-sm">{industry.description}</p>
                   <Dialog>
                     <DialogTrigger asChild>
                       <Button variant="link" className="mt-2 text-accent p-0 text-sm">
@@ -160,7 +160,7 @@ const Industries = () => {
                     </DialogTrigger>
                     <DialogContent className="max-w-3xl max-h-[80vh] overflow-y-auto">
                       <DialogHeader>
-                        <DialogTitle className="text-2xl font-bold text-white">
+                        <DialogTitle className="text-2xl font-bold text-business-blue">
                           {industry.title}
                         </DialogTitle>
                       </DialogHeader>
@@ -175,10 +175,10 @@ const Industries = () => {
                             line.startsWith('-') ? (
                               <div key={index} className="flex items-start gap-2 mt-2">
                                 <span className="text-accent mt-1">•</span>
-                                <span className="text-black">{line.substring(2)}</span>
+                                <span className="text-gray-600">{line.substring(2)}</span>
                               </div>
                             ) : (
-                              <p key={index} className="font-semibold text-black mt-4 mb-2">{line}</p>
+                              <p key={index} className="font-semibold text-business-blue mt-4 mb-2">{line}</p>
                             )
                           ))}
                         </div>
