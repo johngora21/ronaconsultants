@@ -158,75 +158,67 @@ The government's industrialization strategy and regional market access create fa
 
 const Insights = () => {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen">
       <Navbar />
-      
-      {/* Hero Section */}
-      <section className="pt-20 bg-business-blue text-white w-full">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-4 py-4">
-          <h1 className="text-3xl sm:text-4xl font-bold mb-3 sm:mb-4 animate-fade-in">Business Insights</h1>
-          <p className="text-base sm:text-lg animate-fade-in">
-            Stay informed with our latest industry insights and expert analysis on Tanzania's business landscape
-          </p>
-        </div>
-      </section>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <h1 className="text-3xl sm:text-4xl font-bold text-center text-business-blue mb-8">Business Insights</h1>
+        <p className="text-base sm:text-lg text-center text-gray-600 mb-12">
+          Stay informed with our latest industry insights and expert analysis on Tanzania's business landscape
+        </p>
 
-      {/* Insights Grid */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {insights.map((insight, index) => (
-              <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow">
-                <img 
-                  src={insight.image}
-                  alt={insight.title}
-                  className="w-full h-48 object-cover"
-                />
-                <div className="p-6">
-                  <div className="flex justify-between items-center mb-3">
-                    <span className="text-sm text-accent">{insight.category}</span>
-                    <span className="text-sm text-gray-500">{insight.date}</span>
-                  </div>
-                  <h3 className="text-xl font-semibold text-business-blue mb-3">{insight.title}</h3>
-                  <p className="text-gray-600 mb-4">{insight.description}</p>
-                  <Dialog>
-                    <DialogTrigger asChild>
-                      <Button variant="link" className="text-accent p-0">
-                        Learn More
-                      </Button>
-                    </DialogTrigger>
-                    <DialogContent className="max-w-3xl max-h-[80vh] overflow-y-auto">
-                      <DialogHeader>
-                        <DialogTitle className="text-2xl font-bold text-business-blue">
-                          {insight.title}
-                        </DialogTitle>
-                      </DialogHeader>
-                      <div className="mt-4 space-y-4">
-                        <div className="flex justify-between items-center text-sm text-gray-500">
-                          <span>{insight.category}</span>
-                          <span>{insight.date}</span>
-                        </div>
-                        <img 
-                          src={insight.image}
-                          alt={insight.title}
-                          className="w-full h-64 object-cover rounded-lg"
-                        />
-                        <div className="prose prose-sm max-w-none">
-                          {insight.detailedContent.split('\n\n').map((paragraph, i) => (
-                            <p key={i} className="text-gray-600 mb-4">
-                              {paragraph}
-                            </p>
-                          ))}
-                        </div>
-                      </div>
-                    </DialogContent>
-                  </Dialog>
+        {/* Insights Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {insights.map((insight, index) => (
+            <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow">
+              <img 
+                src={insight.image}
+                alt={insight.title}
+                className="w-full h-48 object-cover"
+              />
+              <div className="p-6">
+                <div className="flex justify-between items-center mb-3">
+                  <span className="text-sm text-accent">{insight.category}</span>
+                  <span className="text-sm text-gray-500">{insight.date}</span>
                 </div>
-              </Card>
-            ))}
-          </div>
+                <h3 className="text-xl font-semibold text-business-blue mb-3">{insight.title}</h3>
+                <p className="text-gray-600 mb-4">{insight.description}</p>
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <Button variant="link" className="text-accent p-0">
+                      Learn More
+                    </Button>
+                  </DialogTrigger>
+                  <DialogContent className="max-w-3xl max-h-[80vh] overflow-y-auto">
+                    <DialogHeader>
+                      <DialogTitle className="text-2xl font-bold text-business-blue">
+                        {insight.title}
+                      </DialogTitle>
+                    </DialogHeader>
+                    <div className="mt-4 space-y-4">
+                      <div className="flex justify-between items-center text-sm text-gray-500">
+                        <span>{insight.category}</span>
+                        <span>{insight.date}</span>
+                      </div>
+                      <img 
+                        src={insight.image}
+                        alt={insight.title}
+                        className="w-full h-64 object-cover rounded-lg"
+                      />
+                      <div className="prose prose-sm max-w-none">
+                        {insight.detailedContent.split('\n\n').map((paragraph, i) => (
+                          <p key={i} className="text-gray-600 mb-4">
+                            {paragraph}
+                          </p>
+                        ))}
+                      </div>
+                    </div>
+                  </DialogContent>
+                </Dialog>
+              </div>
+            </Card>
+          ))}
         </div>
-      </section>
+      </div>
     </div>
   );
 };

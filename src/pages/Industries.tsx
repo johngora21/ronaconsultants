@@ -74,8 +74,8 @@ const industries = [
   {
     title: "Government & NGO Services",
     description: "Expert guidance for government and non-profit organizations.",
-    details: "Government and NGO consulting:\n- NGO registration (RITA)\n- Compliance requirements (NGO Board)\n- Grant management\n- Project implementation\n- Regulatory reporting\n- Partnership agreements (Ministry of Home Affairs)\n- Operational permits\n\nKey Regulatory Bodies:\n• RITA - Registration Insolvency and Trusteeship Agency\n• NGO Board - National NGO Coordination Board\n• Ministry of Home Affairs\n• Ministry of Community Development",
-    image: "/images/industries/Economic-Implications-of-Tanzanias-NGO-Sector-In-Employment-Investment-and-Development.jpg"  // Updated with NGO banner image
+    details: "Government and NGO consulting:\n- NGO registration (NGO Board)\n- Compliance requirements (NGO Board)\n- Grant management\n- Project implementation\n- Regulatory reporting\n- Partnership agreements (Ministry of Home Affairs)\n- Operational permits\n\nKey Regulatory Bodies:\n• NGO Board - National NGO Coordination Board\n• Ministry of Home Affairs\n• Ministry of Community Development",
+    image: "/images/industries/Economic-Implications-of-Tanzanias-NGO-Sector-In-Employment-Investment-and-Development.jpg"
   },
   {
     title: "ICT & Telecommunications",
@@ -117,88 +117,80 @@ const Industries = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen">
       <Navbar />
-      
-      {/* Hero Section */}
-      <section className="pt-20 bg-business-blue text-white w-full">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-4 py-4">
-          <h1 className="text-3xl sm:text-4xl font-bold mb-3 sm:mb-4 animate-fade-in">Industries we Serve</h1>
-          <p className="text-base sm:text-lg animate-fade-in">
-            Specialized solutions across key sectors of the Tanzanian economy
-          </p>
-        </div>
-      </section>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <h1 className="text-3xl sm:text-4xl font-bold text-center text-business-blue mb-8">Industries we Serve</h1>
+        <p className="text-base sm:text-lg text-center text-gray-600 mb-12">
+          Specialized solutions across key sectors of the Tanzanian economy
+        </p>
 
-      {/* Industries Grid */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
-            {industries.map((industry, index) => (
-              <Card 
-                key={index} 
-                className="p-6 transition-all duration-300 hover:shadow-lg overflow-hidden"
-              >
-                <div className="relative w-full h-40 mb-4 rounded-lg overflow-hidden bg-gray-100">
-                  {!imageError[index] && industry.image && (
-                    <img
-                      src={industry.image}
-                      alt={industry.title}
-                      className="w-full h-full object-cover"
-                      onError={() => handleImageError(index)}
-                    />
-                  )}
-                  {(imageError[index] || !industry.image) && (
-                    <div className="w-full h-full flex items-center justify-center">
-                      <FileText className="h-12 w-12 text-gray-400" />
-                    </div>
-                  )}
-                </div>
-                <div className="flex items-start gap-4">
-                  <FileText className="h-6 w-6 text-accent mt-1" />
-                  <div>
-                    <h3 className="text-lg font-semibold mb-2">{industry.title}</h3>
-                    <p className="text-gray-600 text-sm">{industry.description}</p>
-                    <Dialog>
-                      <DialogTrigger asChild>
-                        <Button variant="link" className="mt-2 text-accent p-0 text-sm">
-                          Learn More
-                        </Button>
-                      </DialogTrigger>
-                      <DialogContent className="max-w-3xl max-h-[80vh] overflow-y-auto">
-                        <DialogHeader>
-                          <DialogTitle className="text-2xl font-bold text-business-blue">
-                            {industry.title}
-                          </DialogTitle>
-                        </DialogHeader>
-                        <div className="mt-4 space-y-4">
-                          <img 
-                            src={industry.image}
-                            alt={industry.title}
-                            className="w-full h-64 object-cover rounded-lg"
-                          />
-                          <div className="prose prose-sm max-w-none">
-                            {industry.details.split('\n').map((line, index) => (
-                              line.startsWith('-') ? (
-                                <div key={index} className="flex items-start gap-2 mt-2">
-                                  <span className="text-accent mt-1">•</span>
-                                  <span className="text-gray-600">{line.substring(2)}</span>
-                                </div>
-                              ) : (
-                                <p key={index} className="font-semibold text-business-blue mt-4 mb-2">{line}</p>
-                              )
-                            ))}
-                          </div>
-                        </div>
-                      </DialogContent>
-                    </Dialog>
+        {/* Industries Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          {industries.map((industry, index) => (
+            <Card 
+              key={index} 
+              className="p-6 transition-all duration-300 hover:shadow-lg overflow-hidden"
+            >
+              <div className="relative w-full h-40 mb-4 rounded-lg overflow-hidden bg-gray-100">
+                {!imageError[index] && industry.image && (
+                  <img
+                    src={industry.image}
+                    alt={industry.title}
+                    className="w-full h-full object-cover"
+                    onError={() => handleImageError(index)}
+                  />
+                )}
+                {(imageError[index] || !industry.image) && (
+                  <div className="w-full h-full flex items-center justify-center">
+                    <FileText className="h-12 w-12 text-gray-400" />
                   </div>
+                )}
+              </div>
+              <div className="flex items-start gap-4">
+                <FileText className="h-6 w-6 text-accent mt-1" />
+                <div>
+                  <h3 className="text-lg font-semibold mb-2">{industry.title}</h3>
+                  <p className="text-gray-600 text-sm">{industry.description}</p>
+                  <Dialog>
+                    <DialogTrigger asChild>
+                      <Button variant="link" className="mt-2 text-accent p-0 text-sm">
+                        Learn More
+                      </Button>
+                    </DialogTrigger>
+                    <DialogContent className="max-w-3xl max-h-[80vh] overflow-y-auto">
+                      <DialogHeader>
+                        <DialogTitle className="text-2xl font-bold text-business-blue">
+                          {industry.title}
+                        </DialogTitle>
+                      </DialogHeader>
+                      <div className="mt-4 space-y-4">
+                        <img 
+                          src={industry.image}
+                          alt={industry.title}
+                          className="w-full h-64 object-cover rounded-lg"
+                        />
+                        <div className="prose prose-sm max-w-none">
+                          {industry.details.split('\n').map((line, index) => (
+                            line.startsWith('-') ? (
+                              <div key={index} className="flex items-start gap-2 mt-2">
+                                <span className="text-accent mt-1">•</span>
+                                <span className="text-gray-600">{line.substring(2)}</span>
+                              </div>
+                            ) : (
+                              <p key={index} className="font-semibold text-business-blue mt-4 mb-2">{line}</p>
+                            )
+                          ))}
+                        </div>
+                      </div>
+                    </DialogContent>
+                  </Dialog>
                 </div>
-              </Card>
-            ))}
-          </div>
+              </div>
+            </Card>
+          ))}
         </div>
-      </section>
+      </div>
     </div>
   );
 };
