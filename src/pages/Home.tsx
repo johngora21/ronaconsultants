@@ -41,8 +41,10 @@ const Home = () => {
             </div>
 
             {/* Info Card */}
-            <div className="absolute bottom-8 right-8">
-              <div className="bg-white/10 backdrop-blur-md rounded-2xl p-10 border border-white/20 shadow-2xl max-w-xl">
+            <div
+              className="lg:absolute lg:bottom-8 lg:right-8 mt-8 lg:mt-0 w-full lg:w-auto"
+            >
+              <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 sm:p-8 lg:p-10 border border-white/20 shadow-2xl w-full max-w-xl mx-auto lg:mx-0">
                 <div className="flex items-center gap-3 mb-6">
                   <div className="bg-accent/20 p-3 rounded-lg">
                     <svg className="w-7 h-7 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
