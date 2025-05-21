@@ -53,30 +53,6 @@ const AboutUs = ({ isSection = false }: AboutUsProps) => {
           </div>
         ))}
       </div>
-
-      {/* Team Section */}
-      <div className="space-y-8 sm:space-y-12">
-        <h2 className="text-2xl sm:text-3xl font-bold text-center text-white mb-6">Our Leadership Team</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-          {/* Team member cards would be populated here */}
-        </div>
-      </div>
-
-      {/* Why Choose Us Section */}
-      <div className="mt-12 sm:mt-16">
-        <h2 className="text-2xl sm:text-3xl font-bold text-center text-white mb-6">Why Choose Us</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-          {/* Why choose us cards would be populated here */}
-        </div>
-      </div>
-
-      {/* Our Approach Section */}
-      <div className="mt-12 sm:mt-16">
-        <h2 className="text-2xl sm:text-3xl font-bold text-center text-white mb-6">Our Approach</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
-          {/* Our approach cards would be populated here */}
-        </div>
-      </div>
     </div>
   );
 

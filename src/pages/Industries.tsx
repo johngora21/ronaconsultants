@@ -192,14 +192,6 @@ const Industries = ({ isSection = false }: IndustriesProps) => {
           </Card>
         ))}
       </div>
-
-      {/* Why Choose Us Section */}
-      <div className="mt-12 sm:mt-16">
-        <h2 className="text-2xl sm:text-3xl font-bold text-center text-white mb-6">Why Choose Us</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-          {/* Add Why Choose Us content here */}
-        </div>
-      </div>
     </div>
   );
 
