@@ -121,14 +121,14 @@ const Industries = ({ isSection = false }: IndustriesProps) => {
   };
 
   const content = (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      <h1 className="text-3xl sm:text-4xl font-bold text-center text-white mb-8">Industries we Serve</h1>
-      <p className="text-base sm:text-lg text-center text-gray-300 mb-12">
-        Specialized solutions across key sectors of the Tanzanian economy
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+      <h1 className="text-3xl sm:text-4xl font-bold text-center text-white mb-6">Industries We Serve</h1>
+      <p className="text-base sm:text-lg text-center text-gray-300 mb-8">
+        Comprehensive solutions for diverse sectors
       </p>
 
       {/* Industries Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
         {industries.map((industry, index) => (
           <Card 
             key={index} 
@@ -191,6 +191,14 @@ const Industries = ({ isSection = false }: IndustriesProps) => {
             </div>
           </Card>
         ))}
+      </div>
+
+      {/* Why Choose Us Section */}
+      <div className="mt-12 sm:mt-16">
+        <h2 className="text-2xl sm:text-3xl font-bold text-center text-white mb-6">Why Choose Us</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+          {/* Add Why Choose Us content here */}
+        </div>
       </div>
     </div>
   );

@@ -6,10 +6,10 @@ interface AboutUsProps {
 
 const AboutUs = ({ isSection = false }: AboutUsProps) => {
   const content = (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      <h1 className="text-3xl sm:text-4xl font-bold text-center text-white mb-8">About Us</h1>
-      <p className="text-base sm:text-lg text-center text-gray-300 mb-12">
-        Your trusted partner in business excellence and regulatory compliance
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+      <h1 className="text-3xl sm:text-4xl font-bold text-center text-white mb-6">About Us</h1>
+      <p className="text-base sm:text-lg text-center text-gray-300 mb-8">
+        Your trusted partner in business excellence
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
@@ -52,6 +52,30 @@ const AboutUs = ({ isSection = false }: AboutUsProps) => {
             <p className="text-gray-300">{value.description}</p>
           </div>
         ))}
+      </div>
+
+      {/* Team Section */}
+      <div className="space-y-8 sm:space-y-12">
+        <h2 className="text-2xl sm:text-3xl font-bold text-center text-white mb-6">Our Leadership Team</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+          {/* Team member cards would be populated here */}
+        </div>
+      </div>
+
+      {/* Why Choose Us Section */}
+      <div className="mt-12 sm:mt-16">
+        <h2 className="text-2xl sm:text-3xl font-bold text-center text-white mb-6">Why Choose Us</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+          {/* Why choose us cards would be populated here */}
+        </div>
+      </div>
+
+      {/* Our Approach Section */}
+      <div className="mt-12 sm:mt-16">
+        <h2 className="text-2xl sm:text-3xl font-bold text-center text-white mb-6">Our Approach</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+          {/* Our approach cards would be populated here */}
+        </div>
       </div>
     </div>
   );

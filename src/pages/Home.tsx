@@ -16,7 +16,7 @@ const Home = () => {
       
       {/* Hero Section */}
       
-      <section className="relative text-black min-h-[100vh] flex flex-col" 
+      <section className="relative text-black min-h-[80vh] flex flex-col" 
         style={{ 
           backgroundImage: "url('/images/industries/black.jpg')", 
           backgroundSize: 'cover',
@@ -71,9 +71,9 @@ const Home = () => {
       </section>
 
       {/* Mission, Vision & Values Section */}
-      <section className="py-20 bg-gray-100">
+      <section className="py-12 sm:py-16 bg-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
             <div className="bg-white p-8 rounded-lg shadow-sm">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Our Mission</h2>
               <p className="text-gray-600">
@@ -93,8 +93,8 @@ const Home = () => {
           </div>
 
           {/* Values */}
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-12">Our Values</h2>
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold text-gray-900 mb-8">Our Values</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
                 {
@@ -146,7 +146,7 @@ const Home = () => {
       </section>
 
       {/* Final Call to Action Section */}
-      <section className="bg-gray-100 py-16">
+      <section className="bg-gray-100 py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl font-bold text-gray-900 mb-6">Ready to Get Started?</h2>
           <p className="text-lg text-gray-600 mb-8">
